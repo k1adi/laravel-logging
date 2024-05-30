@@ -52,4 +52,16 @@ class LoggingTest extends TestCase
 
         self::assertTrue(true);
     }
+
+    public function testCustomHandler()
+    {
+        $customHandler = Log::channel('custom');
+
+        $customHandler->info("Custom log info");
+        $customHandler->warning("Custom log warning");
+        $customHandler->error("Custom log error");
+        $customHandler->critical("Custom log critical");
+
+        self::assertTrue(true);
+    }
 }
