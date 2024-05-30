@@ -18,4 +18,24 @@ class LoggingTest extends TestCase
 
         self::assertTrue(true);
     }
+
+    public function testLogContext()
+    {
+        Log::info('Log context', ['user' => 'kiadi']);
+
+        self::assertTrue(true);
+    }
+
+    public function testLogWithContext()
+    {
+        Log::withContext([
+            'user' => 'with kiadi'
+        ]);
+
+        Log::info('Log with context 1');
+        Log::info('Log with context 2');
+        Log::info('Log with context 3');
+
+        self::assertTrue(true);
+    }
 }
