@@ -54,6 +54,7 @@ return [
         'stack' => [
             'driver' => 'stack',
             'channels' => ['stderr'],
+            // Use multiple channel
             // 'channels' => ['single', 'daily', 'stderr'],
             'ignore_exceptions' => false,
         ],
